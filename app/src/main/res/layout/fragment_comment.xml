@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_comment_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <FrameLayout
+        android:id="@+id/fragment_comment_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/fragment_comment_video_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="全部评论"
+        android:textColor="#fff"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/fragment_comment_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginRight="27dp"
+        android:src="@drawable/icon_close"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/fragment_comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="15dp"
+        android:text="全部评论(12138)"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_comment_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragment_comment_num"
+        android:layout_marginTop="10dp"
+        android:visibility="visible" />
+</RelativeLayout>

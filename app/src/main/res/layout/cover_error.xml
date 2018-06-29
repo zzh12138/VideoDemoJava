@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4262525"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/cover_error_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/icon_retry"
+        android:text="播放出错，请点击重试"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+</FrameLayout>

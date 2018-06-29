@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/cover_player_controller_top_container"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_top_gradient"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/cover_player_controller_image_view_back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_player_back" />
+
+            <TextView
+                android:id="@+id/cover_player_controller_text_view_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/cover_player_controller_image_view_back_icon"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cover_player_controller_bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_gradient"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/cover_player_controller_image_view_play_state"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_play_state" />
+
+        <TextView
+            android:id="@+id/cover_player_controller_text_view_curr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/cover_player_controller_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:splitTrack="false" />
+
+        <TextView
+            android:id="@+id/cover_player_controller_text_view_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="00:00:00"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/cover_player_controller_image_view_switch_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_full_screen" />
+    </LinearLayout>
+
+</RelativeLayout>
