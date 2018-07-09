@@ -238,12 +238,14 @@ public class VideoListFragment extends Fragment implements VideoListAdapter.onAn
     public void onPlayerEvent(int eventCode, Bundle bundle) {
         switch (eventCode) {
             case OnPlayerEventListener.PLAYER_EVENT_ON_PLAY_COMPLETE:
-                int playPosition = mAdapter.getPlayPosition();
-                if (playPosition <= mList.size() - 2) {
-                    LinearLayoutManager manager = (LinearLayoutManager) mRecycler.getLayoutManager();
-                    int first = manager.findFirstVisibleItemPosition();
-                    View view = mRecycler.getChildAt(playPosition + 1 - first);
-                    mRecycler.smoothScrollBy(0, view.getTop());
+                if(!isShowComment) {
+                    int playPosition = mAdapter.getPlayPosition();
+                    if (playPosition <= mList.size() - 2) {
+                        LinearLayoutManager manager = (LinearLayoutManager) mRecycler.getLayoutManager();
+                        int first = manager.findFirstVisibleItemPosition();
+                        View view = mRecycler.getChildAt(playPosition + 1 - first);
+                        mRecycler.smoothScrollBy(0, view.getTop());
+                    }
                 }
                 break;
         }
