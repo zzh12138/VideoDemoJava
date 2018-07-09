@@ -125,6 +125,14 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
                 }
             }
         });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (holder.getLayoutPosition() != mPlayPosition) {
+                    holder.image.performClick();
+                }
+            }
+        });
     }
 
     @Override

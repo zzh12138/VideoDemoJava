@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity implements NewsAdapter.onVid
                     NewsAdapter.VideoHolder holder = (NewsAdapter.VideoHolder) mRecycler.findViewHolderForLayoutPosition(clickPosition);
                     AssistPlayer.get().play(holder.container, null);
                 }
-            }, 750);
+            }, 800);
         } else {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.remove(mFragment);
