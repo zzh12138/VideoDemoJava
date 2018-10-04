@@ -169,9 +169,7 @@ public class VideoListFragment extends Fragment implements VideoListAdapter.onAn
     @Override
     public void onMessageClick(NewsBean bean, ViewAttr attr) {
         isShowComment = true;
-        if (commentFragment == null) {
-            commentFragment = new CommentFragment();
-        }
+        commentFragment = new CommentFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         Bundle bundle = new Bundle();
         bundle.putParcelable("attr", attr);
@@ -238,7 +236,7 @@ public class VideoListFragment extends Fragment implements VideoListAdapter.onAn
     public void onPlayerEvent(int eventCode, Bundle bundle) {
         switch (eventCode) {
             case OnPlayerEventListener.PLAYER_EVENT_ON_PLAY_COMPLETE:
-                if(!isShowComment) {
+                if (!isShowComment) {
                     int playPosition = mAdapter.getPlayPosition();
                     if (playPosition <= mList.size() - 2) {
                         LinearLayoutManager manager = (LinearLayoutManager) mRecycler.getLayoutManager();

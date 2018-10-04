@@ -190,9 +190,7 @@ public class MainActivity extends AppCompatActivity implements NewsAdapter.onVid
     //点击标题，添加视频列表list
     @Override
     public void onTitleClick(int position, ViewAttr attr) {
-        if (mFragment == null) {
-            mFragment = new VideoListFragment();
-        }
+        mFragment = new VideoListFragment();
         clickPosition = position;
         isShowVideoList = true;
         Bundle bundle = new Bundle();
