@@ -219,6 +219,7 @@ public class MainActivity extends AppCompatActivity implements NewsAdapter.onVid
                 }
             }, 800);
         } else {
+            AssistPlayer.get().destroy();
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.remove(mFragment);
             transaction.commit();
