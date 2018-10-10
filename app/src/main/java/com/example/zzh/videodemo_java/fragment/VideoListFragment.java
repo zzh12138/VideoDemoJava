@@ -204,8 +204,8 @@ public class VideoListFragment extends Fragment implements VideoListAdapter.onAn
                 title.setVisibility(View.GONE);
                 bottom.setVisibility(View.GONE);
                 image.setVisibility(View.GONE);
-                container.animate().scaleX(container.getMeasuredWidth() / (float) mAttr.getWidth())
-                        .scaleY(container.getMeasuredHeight() / (float) mAttr.getHeight())
+                container.animate().scaleX((float) mAttr.getWidth() / container.getMeasuredWidth())
+                        .scaleY((float) mAttr.getHeight() / container.getMeasuredHeight())
                         .setDuration(DURATION);
                 view.animate().translationY(mAttr.getY() - location[1]).setDuration(DURATION);
                 ObjectAnimator animator = ObjectAnimator.ofInt(mRoot, "backgroundColor", 0xff000000, 0x00000000);
